@@ -3,6 +3,7 @@ import './Cart.css'
 
 const Cart = (props) => {
     const { cart } = props;
+    console.log(cart);
     let totalBand = 0;
     let total = 0;
     let bandName = "";
@@ -21,11 +22,13 @@ const Cart = (props) => {
             <div className="total-section">
                 <h3>Band Added</h3>
                 <h5>Total Band Added: {totalBand}</h5>
-                <p>Total: {total}</p>
+                <p>Total: BDT {total} TK</p>
             </div>
-            <div className="band-section">
-                <h1>{bandName}</h1>
-            </div>
+            
+                {
+                    cart.map(band => <div className="band-section"><img src={band.img} alt="" /><h5>{band.name}</h5></div>)
+                }
+            
             
         </div>
     );
