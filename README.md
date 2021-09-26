@@ -24,7 +24,7 @@ On `return` of data I returned `Band` component data under the hood of band-cont
 
 ### `Band`
 
-`Band` component is one of the main component of this projects here user shaw all the data. 
+This `Band` component is one of the main component of this projects here user shaw all the data. 
 And also in this component I added a button. Which get data from `Main` component. When user click on that button cart data will updated
 
 ### `Cart`
