@@ -3,17 +3,14 @@ import './Cart.css'
 
 const Cart = (props) => {
     const { cart } = props;
-    console.log(cart);
     let totalBand = 0;
     let total = 0;
-    let bandName = "";
     for ( const band of cart) {
         if (!band.quantity) {
             band.quantity = 1;
         }
         bandName = bandName + band.name ;
         total = total + band.budget;
-        totalBand = totalBand + band.quantity;
     }
 
 
