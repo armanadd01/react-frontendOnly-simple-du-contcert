@@ -1,5 +1,5 @@
 import React from 'react';
-import './Cart.js'
+import './Cart.css'
 
 const Cart = (props) => {
     const { cart } = props;
@@ -17,7 +17,7 @@ const Cart = (props) => {
 
 
     return (
-        <div>
+        <div className="cart-section">
             <div className="total-section">
                 <h3>Band Added</h3>
                 <h5>Total Band Added: {totalBand}</h5>

@@ -1,0 +1,7 @@
+.total-section, .band-section {
+    background-color: white;
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid rgb(27, 233, 223);
+    border-radius: 1em;
+}

@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, fa } from '@fortawesome/free-solid-svg-icons';
 import './Band.css'
 
 const Band = (props) => {
@@ -17,7 +19,7 @@ const Band = (props) => {
                 <button
                     onClick={() => props.handleAddToCart(props.band)}
                     className="btn-info"
-                >Add This Band</button>
+                ><FontAwesomeIcon icon={faPlus} />Add This Band</button>
             
             </div>
         </div>
