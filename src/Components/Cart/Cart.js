@@ -7,15 +7,12 @@ const Cart = (props) => {
     let total = 0;
     let bandName = "";
     for ( const band of cart) {
-        
+        if (!band.quantity) {
+            band.quantity = 1;
+        }
         bandName = bandName + band.name ;
         total = total + band.budget;
-        totalBand = totalBand + 1;
-    }
-    const bandNameShow = () => {
-        while(!bandName){
-            <h1>{bandName}</h1>
-        }
+        totalBand = totalBand + band.quantity;
     }
 
 

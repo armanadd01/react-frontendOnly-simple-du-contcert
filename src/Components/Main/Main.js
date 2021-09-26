@@ -13,8 +13,8 @@ const Main = () => {
         .then(data => setBands(data));
     }, []);
 
-    const handleAddToCart = (product) => {
-        const newCart = [...cart, product];
+    const handleAddToCart = (band) => {
+        const newCart = [...cart, band];
         setCart(newCart);
     }
 
@@ -32,6 +32,7 @@ const Main = () => {
             </div>
             <div className="cart-container">
                 <Cart cart={cart}></Cart>
+                
             
             </div>
         </div>
