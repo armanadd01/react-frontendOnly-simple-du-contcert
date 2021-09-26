@@ -4,16 +4,17 @@ import Cart from '../Cart/Cart';
 import './Main.css'
 
 const Main = () => {
+    //useState
     const [bands, setBands] = useState([]);
     const [cart, setCart] = useState([]);
-
+    // useEffect for fetch data
     useEffect(() => {
         fetch('./bandDb.JSON')
         .then(res => res.json())
         .then(data => setBands(data));
     }, []);
-
-    const handleAddToCart = (band) => {
+    // Arrow function for handle cart data
+    const addToCart = (band) => {
         const newCart = [...cart, band];
         setCart(newCart);
     }
@@ -25,7 +26,7 @@ const Main = () => {
                     bands.map(band => <Band
                         key={band.key}
                         band={band}
-                        handleAddToCart={handleAddToCart}
+                        addToCart={addToCart}
                     >
                     </Band>)
                 }
