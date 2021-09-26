@@ -9,8 +9,8 @@ const Cart = (props) => {
         if (!band.quantity) {
             band.quantity = 1;
         }
-        bandName = bandName + band.name ;
         total = total + band.budget;
+        totalBand = totalBand + band.quantity;
     }
 
 
