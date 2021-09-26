@@ -15,7 +15,9 @@ const Main = () => {
     }, []);
     // Arrow function for handle cart data
     const addToCart = (band) => {
-        const newCart = [...cart, band];
+        const newCartArray = [...cart, band];
+        const uniqueCart = new Set(newCartArray);
+        const newCart = [...uniqueCart]
         setCart(newCart);
     }
 
